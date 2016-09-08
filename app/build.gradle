@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+retrolambda {
+    jdk "C:\\Program Files\\Java\\jdk1.8.0_92"
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    dexOptions {
+        incremental false
+    }
+
+    defaultConfig {
+        applicationId "net.waterfoul.gear.gears2persistantnotifications"
+        minSdkVersion 23
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile files('C:/Users/aaichlmayr.IOS/Documents/Gears2PersistantNotifications/libs/gson-2.2.4.jar')
+    compile files('C:/Users/aaichlmayr.IOS/Documents/Gears2PersistantNotifications/libs/richnotification-v.1.1.3.jar')
+    compile files('C:/Users/aaichlmayr.IOS/Documents/Gears2PersistantNotifications/libs/sdk-v1.0.0.jar')
+}
