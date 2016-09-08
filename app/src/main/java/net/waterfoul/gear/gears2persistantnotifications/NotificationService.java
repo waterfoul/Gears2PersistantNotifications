@@ -101,9 +101,9 @@ public class NotificationService extends NotificationListenerService {
                     String[] info = ret.second.get(3).split(" [·-] ");
 
                     if (info[2].startsWith("toward")) {
-                        title = "Head " + info[2];
+                        title = "Head " + info[2].replace('\u00A0', ' ').trim();
                     } else {
-                        title = info[2];
+                        title = info[2].replace('\u00A0', ' ').trim();
                     }
 
                     text = "";

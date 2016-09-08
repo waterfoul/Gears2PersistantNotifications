@@ -155,7 +155,7 @@ public class GearNotifications implements SrnRichNotificationManager.EventListen
                 return;
             }
 
-            if(mdl.gearId != null && !checkStrings(mdl.title, mdl.lastTitle)) {
+            if(mdl.gearId != null && checkStrings(mdl.title, mdl.lastTitle)) {
                 vibrate = false;
             }
             myRichNotification = new SrnRichNotification(context);
